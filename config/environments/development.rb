@@ -1,4 +1,17 @@
 Depot::Application.configure do
+  config.action_mailer.delicery_method = :stmp
+  
+  config.action_mailer.smtp_settings = {
+    :address		=> "smtp.gmail.com",
+    :port		=> 587,
+    :domain		=> "magicbacon.net",
+    :authentication	=> "plain",
+    :user_name		=> "magicbacon",
+    :password		=> "94876623",
+    :enable_starttls_auto => true
+  }
+
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
